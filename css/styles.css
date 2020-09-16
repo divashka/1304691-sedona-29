@@ -1,0 +1,146 @@
+/* Кастомные свойства */
+:root{
+    --basic-blue: #81B3D2;
+    --basic-blue2: #81B3D3;
+    --basic-white:  #FFFFFF;
+    --basic-black: #000000;
+    --text-dark: #333333;
+    --special-light:#EEEEEE;
+
+    --form-brown: #766357;
+    --form-bg: #F2F2F2;
+}
+
+/* Общие стили */
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--basic-black);
+}
+
+li{
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrapper{
+    min-width: 1200px;
+}
+
+
+/* Навигация */
+
+
+.header-nav{
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 26px;
+    margin: 15px 72px;
+}
+
+
+/* .menu{
+    display: flex;
+    justify-content: space-around;
+} */
+
+
+/* Приветственная страница */
+
+.welcome{
+    text-align: center;
+}
+
+
+/* Основной контент  */
+
+.advantages h2{
+    text-align: center;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.advantages_reasons{
+    text-align: center;
+    line-height: 26px;
+}
+
+.advantages_title{
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.advantages-bg{
+    background-color: var(--special-light);
+}
+
+.text-block{
+    background-color: var(--basic-blue);
+    color: var(--basic-white);
+    text-align: center;
+}
+
+.text-block__title{
+    font-weight: 700;
+    font-size: 21px;
+}
+
+/* Заключение */
+
+.conclusion{
+    text-align: center;
+}
+
+.conclusion h2{
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 24px;
+}
+
+.conclusion-button{
+    padding: 30px 124px 30px 125px;
+    background-color: var(--form-brown);
+    font-size: 21px;
+    line-height: 26px;
+    color: var(--basic-white);
+    border: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Футер */
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+}
+
+.contacts{
+    font-weight: bold;
+    font-size: 21px;
+    line-height: 26px;
+}
+
+.copyright{
+    line-height: 26px;
+}
+
