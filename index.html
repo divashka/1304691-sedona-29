@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body class="page-body">
+  <body>
 
     <!-- Шапка -->
     <header class="header">
@@ -29,7 +29,7 @@
       
       <!-- Приветственная страница -->
       <section class="welcome">
-        <h1 class="hidden">Седона - отличное место для отдыха</h1>
+        <h1 class="welcome__hidden">Седона - отличное место для отдыха</h1>
         <p>Welcome<span> to the gorgeous</span></p>
         <p>Sedona</p>
         <q>Because the Grand<br>Canyon sucks!</q>
@@ -37,7 +37,7 @@
 
       <!-- Преимущества города -->
         <section class="advantages">
-        <h2>Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
+        <h2 class="advantages__title advantages__title_main">Седона — небольшой городок в Аризоне,<br> заслуживающий большего!</h2>
         <p class="advantages__reasons">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 
         <ul class="advantages__list">
@@ -51,21 +51,21 @@
           </li>
 
           <!-- Отдельно три пункта(не нумеруются) -->
-          <li class="advantages__item advantages_sub">
+          <li class="advantages__item advantages__item_sub">
             <img src="https://via.placeholder.com/75x70" alt="Жилье">
             <div>
               <h3 class="advantages__title">Жильё</h3>
               <p class="advantages__text">Рекомендуем пожить в настоящем<br>мотеле, всё как в кино!</p>
             </div>
           </li>
-          <li class="advantages__item advantages-sub">
+          <li class="advantages__item advantages__item_sub">
             <img src="https://via.placeholder.com/75x70" alt="Еда">
             <div>
               <h3 class="advantages__title">Еда</h3>
               <p class="advantages__text">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
             </div>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item advantages__item_sub">
             <img src="https://via.placeholder.com/75x70" alt="Сувениры">
             <div>
               <h3 class="advantages__title">Сувениры</h3>
@@ -100,7 +100,7 @@
           </li>
 
           <li class="advantages__item">
-            <div class="advantages_bg">
+            <div class="advantages__bg">
             <h3 class="advantages__title">Мало<br>туристов</h3>
             <p class="advantages__sub">— №5 —</p>
             <p class="advantages__text">Большинство едет в гранд каньон и толпится там</p> 
@@ -116,7 +116,7 @@
         Укажите предполагаемые даты поездки,<br>
         и мы покажем вам лучшие предложения гостиниц в Cедоне
         </p>
-        <button class="conclusion__button" type="submit">Поиск гостиницы в Седоне</button>
+        <button class="conclusion__submit" type="submit">Поиск гостиницы в Седоне</button>
         <!-- Здесь будет карта -->
         <!-- Форма для поиска гостиницы -->
         </section>
@@ -126,18 +126,20 @@
     <!-- Подвал -->
     <footer class="footer">
       <p class="footer__contacts">
-       #visitSEDONA<br>
-       ТЕЛ:<a href='tel:7(495) 666-01-66'>+7(495) 666-01-66</a> 
+        #visitSEDONA<br>
+        ТЕЛ:<a href='tel:7(495) 666-01-66'>+7(495) 666-01-66</a>
       </p>
-      <ul class="footer__social">
-        <li><a class="social-button" href="#"><img src="https://via.placeholder.com/46x48" alt="Твиттер"></a></li>
-        <li><a class="social-button" href="#"><img src="https://via.placeholder.com/46x48" alt="Фейсбук"></a></li>
-        <li><a class="social-button" href="#"><img src="https://via.placeholder.com/46x48" alt="Ютуб"></a></li>
+      <ul class="footer__social social">
+        <li><a class="social__button" href="#"><img src="https://via.placeholder.com/46x48" alt="Твиттер"></a></li>
+        <li><a class="social__button" href="#"><img src="https://via.placeholder.com/46x48" alt="Фейсбук"></a></li>
+        <li><a class="social__button" href="#"><img src="https://via.placeholder.com/46x48" alt="Ютуб"></a></li>
       </ul>
       <p class="footer__copyright">
-      Website by
-      <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/115x41" alt="Логотип HTML Academy"></a>
+        Website by
+        <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="https://via.placeholder.com/115x41"
+            alt="Логотип HTML Academy">
+        </a>
       </p>
     </footer>
-  </body>
-</html>
+    </body>  
+    </html>
