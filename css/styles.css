@@ -8,6 +8,8 @@
     --basic-black: #000000;
     --text-dark: #333333;
     --special-light:#EEEEEE;
+    --special-black:#231F20;
+    --special-grey: #BDBBBC;
 
     --light-brown: #766357;
     --dark-brown: #604E43;
@@ -165,9 +167,18 @@ img {
     line-height: 26px;
 }
 
-.footer__copyright{
-    line-height: 26px;
+.footer__copyright-link{
+    color: var("--special-black");
 }
+
+.footer__copyright-link:hover{
+    color:var(--basic-blue);
+}
+
+.footer__copyright-link:active{
+    color: var(--special-grey);
+}
+
 
 /* Каталог */
 
