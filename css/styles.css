@@ -66,6 +66,10 @@ img {
 
 /* Шапка*/
 
+.header{
+    margin-bottom: -15px;
+}
+
 .header__nav{
     font-weight: bold;
     line-height: 26px;
@@ -75,20 +79,13 @@ img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 130px;
-    padding: 15px 0;
+    padding: 15px 72px;
     margin-top:-78px;
     list-style-type: none;
 }
 
 .header__logo{
-    /* position: relative;
-    z-index: 1; */
     text-align: center;
-}
-
-.menu__item{
-    /* outline: 5px solid rgba(255, 0, 255, 0.7);
-    outline-offset: -5px; */
 }
 
 .menu__map,
@@ -96,21 +93,11 @@ img {
     text-align: right;
 }
 
-.menu__info{
-    margin-left: 72px; 
-}
-
-.menu__hotels{
-    margin-right: 72px;
-}
-
-
 /* Приветственная страница */
 
 .welcome{
     position: relative;
     z-index: -1;
-    margin-top: -15px;
     background: url("../img/background.jpg") no-repeat;
     height: 509px;
     padding-top: 62px;
@@ -310,7 +297,6 @@ img {
 .filters{
     position: relative;
     z-index: -1;
-    margin-top: -15px;
     outline: 5px solid rgba(255, 0, 255, 0.7);
     outline-offset: -5px;
 }
