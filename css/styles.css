@@ -11,6 +11,8 @@
     --special-black:#231F20;
     --special-grey: #BDBBBC;
 
+
+    --special-footer: rgba(255, 255, 255, 0.9);
     --light-brown: #766357;
     --dark-brown: #604E43;
     --darkest-brown: #503E33;
@@ -26,6 +28,11 @@ body{
     text-transform: uppercase;
     font-size: 14px;
     line-height: 21px;
+}
+
+.main-body .footer__wrapper{
+    background-color: var(--special-footer);
+    margin-top: -120px;
 }
 
 a {
@@ -58,7 +65,7 @@ img {
 }
 
 .page-body {
-    min-height: 1280px;
+    height: 100%;
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
@@ -229,7 +236,6 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 120px;
-    margin-top: -120px;
     background-image: url(../img/footer.png);
 }
 
