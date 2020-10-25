@@ -1,22 +1,30 @@
 /* Кастомные свойства */
 :root{
-    --basic-blue: #81B3D2;
-    --dark-blue: #669EC0;
-    --darkest-blue: #5496BD;
-    --basic-blue2: #81B3D3;
     --basic-white:  #FFFFFF;
     --basic-black: #000000;
+    --basic-blue: #81B3D2;
+    --basic-blue2: #81B3D3;
+    --dark-blue: #669EC0;
+    --darkest-blue: #5496BD;
+
     --text-dark: #333333;
-    --special-light:#EEEEEE;
-    --special-black:#231F20;
+
     --special-grey: #BDBBBC;
+    --dark-grey: rgba(255, 255, 255, .3);
+    --darkest-grey: rgba(0, 0, 0, 0.3);
 
 
     --special-footer: rgba(255, 255, 255, 0.9);
     --light-brown: #766357;
     --dark-brown: #604E43;
     --darkest-brown: #503E33;
+
+    --special-light:#EEEEEE;
+    --special-black:#231F20;
     --form-bg: #F2F2F2;
+    --strip-decorate: #E5E5E5;
+
+    --box-shadow: rgba(0, 1, 1, 0.2);
 }
 
 /* Общие стили */
@@ -51,11 +59,18 @@ img {
     width: 1px;
     height: 1px;
     margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
-.wrapper{
-    width: 1200px;
+.box-shadow{
     margin: 0 auto;
+    width: 1200px;
+    box-shadow: 0px 5px 15px var(--box-shadow);
 }
 
 /* Grid */
@@ -64,11 +79,11 @@ img {
     height: 100%;
 }
 
-.page-body {
-    height: 100%;
+.page-body{
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
+    min-height: 100%;
 }
 
 /* Шапка*/
@@ -85,8 +100,7 @@ img {
 .header__menu{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 130px;
-    padding: 15px 72px;
+    padding: 15px 0;
     margin-top:-78px;
     list-style-type: none;
 }
@@ -95,9 +109,32 @@ img {
     text-align: center;
 }
 
+/* .menu__item{
+    outline: 5px solid rgba(255, 0, 255, 0.7);
+    outline-offset: -5px;
+} */
+
 .menu__map,
 .menu__hotels{
     text-align: right;
+}
+
+.header__menu li:first-child,
+.header__menu li:last-child{
+    padding: 0 72px;
+}
+
+.menu__item-link{
+    color: var(--light-brown);
+}
+
+.menu__item-link:hover,
+.menu__item-link:focus {
+    color: var(--basic-blue);
+}
+
+.menu__item-link:active{
+    color: var(--darkest-grey);
 }
 
 /* Приветственная страница */
@@ -105,14 +142,24 @@ img {
 .welcome{
     position: relative;
     z-index: -1;
-    background: url("../img/background.jpg") no-repeat;
+    background:
+    url("../img/background_2.png") no-repeat 0 100%,
+    url("../img/background.jpg") no-repeat;
     height: 509px;
-    padding-top: 62px;
     text-align: center;
 } 
 
+.text-image__welcome{
+    margin: 0;
+    padding-top: 76px;
+}
+
 .text-image__gorgeous{
-    margin-bottom: 55px;
+    margin-bottom: 0 0 55px 0;
+}
+
+.text-image__sedona{
+    margin: 0;
 }
 
 
@@ -123,21 +170,18 @@ img {
 }
 
 .advantages__title{
+    margin-top: 41px;
+    margin-bottom: 56px;
     text-align: center;
     font-size: 21px;
     line-height: 26px;
     font-weight: 700;
 }
 
-.advantages__title_main{
-    margin-bottom: 60px;
-    line-height: 26px;
-}
-
 .advantages__reasons{
+    margin: 52px;
     text-align: center;
     line-height: 26px;
-    margin-bottom: 50px;
 }
 
 .advantages__list{
@@ -151,6 +195,10 @@ img {
 
 .advantages__item{
     text-align: center;
+}
+
+.advantages-item__title{
+    font-size: 21px;
 }
 
 .advantages__item_full{
@@ -191,17 +239,21 @@ img {
 
 .conclusion{
     text-align: center;
+    line-height: 24px;
 }
 
 .conclusion__title{
+    margin-bottom: 40px;
     font-weight: bold;
     font-size: 30px;
-    line-height: 24px;
+}
+
+.conclusion__text{
+    margin-bottom: 51px;
 }
 
 .conclusion__submit{
     padding: 30px 125px;
-    margin-top: 50px;
     background-color: var(--light-brown);
     font-size: 21px;
     line-height: 26px;
@@ -218,7 +270,7 @@ img {
 
 .conclusion__submit:active{
     background-color: var(--darkest-brown);
-    color: rgba(255, 255, 255, .3);
+    color: var(--dark-grey);
 }
 
 .conclusion__find-hotels{
@@ -236,12 +288,9 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 120px;
-    background-image: url(../img/footer.png);
 }
 
 .footer__contacts{
-    position: relative;
-    z-index: 5;
     text-align: center;
     align-self: center;
     font-weight: bold;
@@ -254,15 +303,40 @@ img {
 }
 
 .footer__social{
-    padding: 0;
-    display: flex;
     align-self: center;
-    justify-content: center;
-    list-style-type: none;
+    width: 400px;
 }
 
-.social__item{
-    margin-right: 6px;
+.footer__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 150px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+.social__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 48px;
+    background-color: var(--basic-blue);
+}
+
+.social__button:hover,
+.social__button:focus{
+   background-color: var(--dark-blue);
+}
+
+.social__button:active{
+    background-color: var(--darkest-blue);
+}
+
+.social__button:active path{
+    fill: var(--dark-grey);
 }
 
 .footer__copyright{
@@ -276,10 +350,11 @@ img {
 }
 
 .copyright__logo{
-    color: var("--special-black");
+    color: var(--special-black);
 }
 
-.copyright__logo:hover{
+.copyright__logo:hover,
+.copyright__logo:focus{
     color:var(--basic-blue);
 }
 
@@ -291,7 +366,7 @@ img {
 /* Каталог */
 
 
-.menu__hotels-text:visited{
+.menu__hotels-text{
     color: var(--light-brown);
 }
 
@@ -301,21 +376,16 @@ img {
 }
 
 .filters{
+    background-image: url("../img/filter.png");
     position: relative;
     z-index: -1;
-    outline: 5px solid rgba(255, 0, 255, 0.7);
-    outline-offset: -5px;
 }
-
-.catalog{
-    margin-bottom: 30px;
-}
-
 
 .catalog__info{
     display: flex;
-    margin-top: 30px;
-    margin-bottom: 62px;
+    align-items: center;
+    padding: 0 73px;
+    margin: 30px 0;
 }
 
 .catalog__info-count{
@@ -327,7 +397,6 @@ img {
 }
 
 .catalog__info-sort{
-    margin: 0;
     margin-right: 40px;
     line-height: 18px;
     font-size: 12px;
@@ -342,38 +411,29 @@ img {
     font-size: 12px;
 }
 
+.filter-type,
 .filter-price{
     margin-right: 32px;
 }
 
-.filter-type{
-    margin-right: 32px;
-}
-
-.price__text:visited{
+.price__text{
     color: var(--basic-blue);
 }
 
-.type__text{
-    color: rgba(0, 0, 0, 0.3);
-}
-
-.type__text:hover{
-    color: var(--basic-blue);
-}
-
-.type__text:active{
-    color: var(--basic-black);
-}
-
+.type__text,
 .rating__text{
-    color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px dotted var(--basic-blue);
+    color: var(--darkest-grey);
 }
 
-.rating__text:hover{
+.type__text:hover,
+.type__text:focus,
+.rating__text:hover,
+.rating__text:focus{
     color: var(--basic-blue);
 }
 
+.type__text:active, 
 .rating__text:active{
     color: var(--basic-black);
 }
@@ -387,18 +447,19 @@ img {
 .catalog__item{
     display: flex;
     height: 150px;
-    padding-left: 73px;
-    margin-bottom: 60px;
-}
-
-.link-image__hotel{
-    margin-right: 30px;
+    padding: 0 73px;
+    /* outline: 5px solid rgba(255, 0, 255, 0.7);
+    outline-offset: -5px; */
 }
 
 .catalog__link-image{
     align-self: center;
 }
 
+.link-image__hotel{
+    float: left;
+    margin-right: 30px;
+}
 
 .text-card__title{
     margin:0;
@@ -413,7 +474,7 @@ img {
 }
 
 .text-card__title:active{
-    color: #000000;
+    color: var(--basic-black);
     opacity: 0.3;
 }
 
@@ -421,11 +482,11 @@ img {
 .text-card__price{
     margin: 0;
     display: inline-block;
-    padding-bottom: 15px;
-    
+    padding-bottom: 16px;
 }
 
 .catalog__text-card{
+    padding: 0;
     margin-top: 23px;
 }
 
@@ -448,7 +509,7 @@ img {
 
 .text-card__button_blue:active{
     background-color: var(--darkest-blue);
-    color: rgba(255, 255, 255, .3);
+    color: var(--dark-grey);
 }
 
 .text-card__button_brown{
@@ -461,5 +522,37 @@ img {
 
 .text-card__button_brown:active{
     background-color: var(--darkest-brown);
-    color: rgba(255, 255, 255, .3);
+    color: var(--dark-grey);
+}
+
+.catalog__wrapper{
+    display: flex;
+    width: 100%;
+}
+
+.catalog__rating{
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    /* outline: 5px solid rgba(255, 0, 255, 0.7);
+    outline-offset: -5px; */
+}
+
+.rating__count{
+    margin: 0;
+    padding-bottom: 30px; 
+}
+
+.icon{
+    display: inline-block;
+}
+
+.rating__icon{
+    background: url(../img/sprite.png) 0px 0px no-repeat,
+    url(../img/sprite.png) 0px 0px no-repeat,
+    url(../img/sprite.png) 0px 0px no-repeat,
+    url(../img/sprite.png) 0px 0px no-repeat;
+
+    width: 19px;
+    height: 17px;
 }
