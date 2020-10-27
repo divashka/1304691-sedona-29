@@ -8,6 +8,7 @@
     --darkest-blue: #5496BD;
 
     --text-dark: #333333;
+    --text-rating: #666666;
 
     --special-grey: #BDBBBC;
     --dark-grey: rgba(255, 255, 255, .3);
@@ -21,7 +22,7 @@
 
     --special-light:#EEEEEE;
     --special-black:#231F20;
-    --form-bg: #F2F2F2;
+    --special-bg: #F2F2F2;
     --strip-decorate: #E5E5E5;
 
     --box-shadow: rgba(0, 1, 1, 0.2);
@@ -288,6 +289,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     height: 120px;
+    padding: 0 73px;
 }
 
 .footer__contacts{
@@ -382,6 +384,7 @@ img {
 }
 
 .catalog__info{
+    position: relative;
     display: flex;
     align-items: center;
     padding: 0 73px;
@@ -438,6 +441,33 @@ img {
     color: var(--basic-black);
 }
 
+.arrow__icon{
+    display: inline-block;
+    margin: 0 5px;
+    background-image: url(../img/sprite.png);
+    background-repeat: no-repeat;
+    width: 11px;
+    height: 10px;
+}
+
+.arrow-up{
+    position: absolute;
+    right: 98px;
+    background-position: 0px -17px;
+
+}
+
+.arrow-down{
+    position: absolute;
+    right: 75px;
+    background-position: -19px 0px;
+}
+
+.catalog__arrow{
+    margin: 0;
+    padding: 0;
+}
+
 .catalog__list{
     padding: 0;
     margin: 0;
@@ -446,10 +476,11 @@ img {
 
 .catalog__item{
     display: flex;
+    position: relative;
+    border-top: 1px solid var(--strip-decorate);
+    border-bottom: 1px solid var(--strip-decorate);
     height: 150px;
     padding: 0 73px;
-    /* outline: 5px solid rgba(255, 0, 255, 0.7);
-    outline-offset: -5px; */
 }
 
 .catalog__link-image{
@@ -527,32 +558,26 @@ img {
 
 .catalog__wrapper{
     display: flex;
-    width: 100%;
 }
 
-.catalog__rating{
-    position: relative;
-    display: flex;
-    flex-direction: column-reverse;
-    /* outline: 5px solid rgba(255, 0, 255, 0.7);
-    outline-offset: -5px; */
+.count__image{
+    display: inline-block;
+    position: absolute;
+    top:-74px;
+    background: url(../img/sprite.png) 0px 0px no-repeat;
+    width: 19px;
+    height: 17px;
 }
 
 .rating__count{
     margin: 0;
-    padding-bottom: 30px; 
+    position: absolute;
+    bottom:0;
+    right: 73px;
+    padding: 3px 14px;
+    margin-bottom: 30px;
+    background-color: var(--special-bg);
+    color: var(--text-rating);
 }
 
-.icon{
-    display: inline-block;
-}
 
-.rating__icon{
-    background: url(../img/sprite.png) 0px 0px no-repeat,
-    url(../img/sprite.png) 0px 0px no-repeat,
-    url(../img/sprite.png) 0px 0px no-repeat,
-    url(../img/sprite.png) 0px 0px no-repeat;
-
-    width: 19px;
-    height: 17px;
-}
