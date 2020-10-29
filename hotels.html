@@ -24,7 +24,7 @@
           <li class="menu__item menu__info"><a class="menu__link" href="">Информация</a></li>
           <li class="menu__item menu__photo"><a class="menu__link" href="">Фото и видео</a></li>
           <li class="menu__item menu__map "><a class="menu__link" href="">Карта штата</a></li>
-          <li class="menu__item menu__hotels "><a class="menu__link menu__hotels-text" href=" ">Гостиницы</a></li>
+          <li class="menu__item menu__hotels "><a class="menu__link menu__hotels-text" href="">Гостиницы</a></li>
         </ul>
       </nav>
     </div>
@@ -51,33 +51,31 @@
           <li class="filter__item filter-type"><a class="type__text" href=" ">ПО ТИПУ</a></li>
           <li class="filter__item filter-rating"><a class="rating__text" href=" ">ПО РЕЙТИНГУ</a></li>
         </ul>
-        <a class="catalog__arrow arrow">
-          <span class="arrow__icon arrow-up"></span>
-        </a>
-        <a class="catalog__arrow arrow">
-          <span class="arrow__icon arrow-down"></span>
-        </a>
+      
+        <div class="catalog__arrow arrow">
+          <button class="arrow__icon arrow__icon_up" type="button"></button>
+          <button class="arrow__icon arrow__icon_down" type="button"></button>
+        </div>
       </div>
 
       <!-- Список гостиниц -->
       <ul class="catalog__list">
         <li class="catalog__item">
-          <div class="catalog__wrapper">
             <a class="catalog__link-image" href=""><img class="link-image__hotel" src="img/amara.jpg" width="135" height="90"
                 alt="Гостиница Amara Resort & Spa"></a>
             <div class="catalog__text-card text-card">
               <a href="">
                 <h3 class="text-card__title">Amara Resort & Spa</h3>
               </a>
-              <p class="text-card__hotel">Гостиница</p>
-              <p class="text-card__price">от 4000 Р.</p>
+              
               <div class="text-card__buttons">
+                <p class="text-card__hotel">Гостиница</p>
+                <p class="text-card__price">от 4000 Р.</p>
                 <button class="text-card__button text-card__button_blue" type="button">Подробнее</button>
                 <button class="text-card__button text-card__button_brown" type="button">Забронировать</button>
               </div>
-            </div>
+
           </div>
-        
           <div class="catalog__rating rating">
             <p class="rating__count count">
               <span class="count__image"></span>
@@ -87,20 +85,21 @@
         </li>
 
         <li class="catalog__item">
-          <div class="catalog__wrapper">
             <a class="catalog__link-image" href=""><img class="link-image__hotel" src="img/desert.jpg" width="135" height="90"
                 alt="Гостиница Desert Quail Inn"></a>
             <div class="catalog__text-card text-card">
               <a href="">
                 <h3 class="text-card__title">Desert Quail Inn</h3>
               </a>
-              <p class="text-card__hotel">Мотель</p>
-              <p class="text-card__price">от 3000 Р.</p>
+
+              
               <div class="text-card__buttons">
+                <p class="text-card__hotel">Мотель</p>
+                <p class="text-card__price">от 3000 Р.</p>
                 <button class="text-card__button text-card__button_blue" type="button">Подробнее</button>
                 <button class="text-card__button text-card__button_brown" type="button">Забронировать</button>
               </div>
-            </div>
+
           </div>
           <div class="catalog__rating">
             <p class="rating__count">Рейтинг: 8,9</p>
@@ -108,21 +107,21 @@
         </li>
 
         <li class="catalog__item">
-          <div class="catalog__wrapper">
             <a class="catalog__link-image" href=""><img class="link-image__hotel" src="img/villas.jpg" width="135" height="90"
                 alt="Гостиница Villas at Poco Diablo"></a>
+
             <div class="catalog__text-card text-card">
               <a href="">
                 <h3 class="text-card__title">Villas at Poco Diablo</h3>
               </a>
-              <p class="text-card__hotel">Апартаменты</p>
-              <p class="text-card__price">от 2000 Р.</p>
               <div class="text-card__buttons">
+                <p class="text-card__hotel">Апартаменты</p>
+                <p class="text-card__price">от 2000 Р.</p>
                 <button class="text-card__button text-card__button_blue" type="button">Подробнее</button>
                 <button class="text-card__button text-card__button_brown" type="button">Забронировать</button>
               </div>
             </div>
-          </div>
+
           <div class="catalog__rating">
             <p class="rating__count">Рейтинг: 9,2</p>
           </div>

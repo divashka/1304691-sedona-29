@@ -66,19 +66,19 @@
 
           <!-- Отдельно три пункта(не нумеруются) -->
 
-          <li class="advantages__item advantages__item_sub advantages-item">
+          <li class="advantages__item advantages__item_comment advantages-item">
             <img src="img/home.svg" alt="Жилье">
             <h3 class="advantages-item__title">Жильё</h3>
             <p class="advantages-item__text">Рекомендуем пожить в настоящем<br>мотеле, всё как в кино!</p>
           </li>
 
-          <li class="advantages__item advantages__item_sub advantages-item">
+          <li class="advantages__item advantages__item_comment advantages-item">
             <img src="img/eat.svg" alt="Еда">
             <h3 class="advantages-item__title">Еда</h3>
             <p class="advantages-item__text">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
           </li>
 
-          <li class="advantages__item advantages__item_sub advantages-item">
+          <li class="advantages__item advantages__item_comment advantages-item">
             <img src="img/present.svg" alt="Сувениры">
             <h3 class="advantages-item__title">Сувениры</h3>
             <p class="advantages-item__text">Не только китайского, но и местного<br>производства!</p>
@@ -105,7 +105,7 @@
 
           <li class="advantages__item advantages__item_bg advantages-item">
             <h3 class="advantages-item__title">Красивая<br>дорога</h3>
-            <p class="advantages__sub">— №4 —</p>
+            <p class="advantages-item__sub">— №4 —</p>
             <p class="advantages__text">Ехать в седону из Лас-вегаса</br> совсем не скучно!</p>
           </li>
 
@@ -124,10 +124,37 @@
           Укажите предполагаемые даты поездки,<br>
           и мы покажем вам лучшие предложения гостиниц в Cедоне
         </p>
-        <button class="conclusion__submit" type="submit">Поиск гостиницы в Седоне</button>
+        <button class="conclusion__button" type="button">Поиск гостиницы в Седоне</button>
 
-        <div class="conclusion__find-hotels">
-          <!-- Форма для поиска гостиницы -->
+        <div class="conclusion__search">
+          <form class="conclusion__form" action="https://echo.htmlacademy.ru" method="post">
+
+            <div class="conclusion__text-form text-form">
+              <p class="text-form__item text-form__item_in">
+                <label class="text-form__label" for="date__in">Дата заезда:</label>
+                <input class="text-form__input" id="date__in" type="text" name="date" value="24 апреля 2017">
+                <span></span>
+              </p>
+            
+              <p class="text-form__item text-form__item_out">
+                <label class="text-form__label" for="date__out">Дата выезда:</label>
+                <input class="text-form__input" id="date__out" type="text" name="date" value="4 июля 2017">
+                <span></span>
+              </p>
+            
+              <p class="text-form__item text-form__item_adults">
+                <label for="adults">Взрослые:</label>
+              </p>
+            
+              <p class="text-form__item text-form__item_children">
+                <label for="children">Дети:</label>
+              </p>
+              <button class="conclusion__submit" type="submit">Найти</button>
+            </div>
+
+           
+
+          </form>
         </div>
 
       </section>
