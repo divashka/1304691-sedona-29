@@ -22,6 +22,8 @@
     --special-light:#EEEEEE;
     --special-black:#231F20;
     --special-bg: #F2F2F2;
+    --dark-bg: #EBEBEB;
+
     --strip-decorate: #E5E5E5;
     --grey-arrow: #CACACA;
     --icon-form: #A9A9A9;
@@ -303,8 +305,13 @@ img {
     color: var(--dark-grey);
 }
 
+.conclusion__search{
+    height: 594px;
+    background-image: url(../img/map.png);
+}
+
 .conclusion__form{
-    position: fixed;
+    /* position: fixed; */
     margin: 0 auto;
     width: 568px;
     height: 395px;
@@ -397,6 +404,24 @@ img {
     width: 64px;
     text-align: center;
 }
+
+
+.form__input-wrapper:hover,
+.form__input-wrapper:focus,
+.form__input:hover,
+.form__input:focus{
+    background-color: var(--dark-bg);
+}
+
+.form__input-wrapper:active,
+.form__input:active{
+    background-color: var(--basic-white);
+}
+
+.form__input-wrapper:active{
+    border: 2px solid var(--strip-decorate);
+}
+
 
 .form__icon:hover path,
 .form__icon:focus path{

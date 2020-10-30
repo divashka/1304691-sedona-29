@@ -125,14 +125,14 @@
         <button class="conclusion__button" type="button">Поиск гостиницы в Седоне</button>
 
         <div class="conclusion__search">
-          <iframe class="conclusion__cart" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26192.57784261214!2d-111.81264799912717!3d34.854412362093925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1604079776912!5m2!1sru!2sua" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-          <form class="conclusion__form form" action="https://echo.htmlacademy.ru" method="post">
+          <!-- <iframe class="conclusion__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26192.57784261214!2d-111.81264799912717!3d34.854412362093925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1604079776912!5m2!1sru!2sua" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+          <form class="conclusion__form form" action="https://echo.htmlacademy.ru" method="get">
         
             <div class="form__wrapper">
               <p class="form__item">
                 <label class="form__label" for="date__in">Дата заезда:</label>
               <div class="form__input-wrapper form__input-wrapper_date">
-                <input class="form__input form__input_in" id="date__in" type="text" name="date" value="24 апреля 2017">
+                <input class="form__input form__input_in" type="text" name="date-in" id="date__in" value="24 апреля 2017">
                 <svg class="form__icon" width="21" height="23">
                   <use xlink:href="#calendar" />
                 </svg>
@@ -142,7 +142,7 @@
               <p class="form__item form__item_out">
               <div class="form__label-wrapper"><label for="date__out">Дата выезда:</label></div>
               <div class="form__input-wrapper form__input-wrapper_date">
-                <input class="form__input form__input_out" id="date__out" type="text" name="date" value="4 июля 2017">
+                <input class="form__input form__input_out"  type="text" name="date-out" id="date__out" value="4 июля 2017">
                 <svg class="form__icon" width="21" height="23">
                   <use xlink:href="#calendar" />
                 </svg>
@@ -150,9 +150,9 @@
               </p>
         
               <p class="form__item form__item_count">
-              <div class="form__label-wrapper"><label for="adults">Взрослые:</label></div>
+              <div class="form__label-wrapper"><label for="count-adults">Взрослые:</label></div>
               <div class= "form__input-wrapper form__input-wrapper_adults">
-                <input class="form__input form__input_count" id="adults" type="text" name="adults" value="2">
+                <input class="form__input form__input_count"  type="text" name="adults" id="count-adults" value="2">
                 <svg class="form__icon form-icon_minus" width="12" height="3" viewBox="0 0 12 3" fill="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <rect width="12" height="3" fill="#A9A9A9" />
@@ -165,9 +165,9 @@
                 </svg>
               </div>
         
-              <div class="form__label-wrapper form__label-wrapper_children"><label for="children">Дети:</label></div>
+              <div class="form__label-wrapper form__label-wrapper_children"><label for="count-children">Дети:</label></div>
               <div class="form__input-wrapper form__input-wrapper_children">
-                <input class="form__input form__input_count" id="children" type="text" name="children" value="0">
+                <input class="form__input form__input_count"  type="text" name="children" id="count-children" value="0">
                 <svg class="form__icon form-icon_minus" width="12" height="3" viewBox="0 0 12 3" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <rect width="12" height="3" fill="#A9A9A9" />
@@ -180,7 +180,7 @@
                 </svg>
               </div>
               </p>
-              <button class="form__submit" type="submit">Найти</button>
+              <input class="form__submit" type="submit" value="Найти">
             </div>
           </form>
         </div>
