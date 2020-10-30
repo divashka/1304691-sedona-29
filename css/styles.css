@@ -303,14 +303,8 @@ img {
     color: var(--dark-grey);
 }
 
-.conclusion__search{
-    position: relative;
-    z-index: 0;
-    height: 594px;
-    background-image: url(../img/map.png);
-}
-
 .conclusion__form{
+    position: fixed;
     margin: 0 auto;
     width: 568px;
     height: 395px;
