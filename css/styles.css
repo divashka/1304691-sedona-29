@@ -3,7 +3,6 @@
     --basic-white:  #FFFFFF;
     --basic-black: #000000;
     --basic-blue: #81B3D2;
-    --basic-blue2: #81B3D3;
     --dark-blue: #669EC0;
     --darkest-blue: #5496BD;
 
@@ -25,6 +24,7 @@
     --special-bg: #F2F2F2;
     --strip-decorate: #E5E5E5;
     --grey-arrow: #CACACA;
+    --icon-form: #A9A9A9;
 
     --box-shadow: rgba(0, 1, 1, 0.2);
     --form-shadow: rgba(0, 1, 1, 0.15);
@@ -317,94 +317,133 @@ img {
 
     background-color: var(--basic-white);
     box-shadow: 0px 7px 15px var(--form-shadow);
-}
-
-.conclusion__text-form{
-    display: grid;
-    grid-template-columns: max-content 1fr 1fr;
-    justify-content: start;
-    padding: 55px;
-
     font-weight: 700;
-    line-height: 26px;
 }
 
-.text-form__item{
-    margin-top: 0;
-    margin-bottom: 30px;
+/* ФОРМА ПОИСКА */
+
+.form__wrapper{
+    display: grid;
+    grid-template-columns: max-content 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: 24px;
+    padding: 55px;
 }
 
-.text-form__wrapper{
+.form__item{
+    margin: 0;  
+}
+
+.form__input-wrapper{
     display: flex;
-    justify-content: space-between;
-    margin-left: 24px;
-    padding-left: 14px;
+    align-items: center;
     padding-right: 9px;
-
-    width: 332px;
-    height: 38px;
-
     background-color: var(--special-bg);
-    outline: 5px solid rgba(255, 0, 255, 0.7);
-    outline-offset: -5px;
 }
 
-.text-form__label{
-    outline: 5px solid rgba(255, 0, 255, 0.7);
-    outline-offset: -5px;
+.form__input-wrapper_date{
+    grid-column-start: 2;
+    grid-column-end: 5;
 }
 
-.text-form__item_count{
+.form__input-wrapper_adults{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    outline: 5px solid rgba(255, 0, 255, 0.7);
-    outline-offset: -5px;
+    width: 88px;
+    padding: 0 13px;
+
+    background-color: var(--special-bg);
 }
 
-.text-form__label_children{
-    margin-left: 50px;
+.form__input-wrapper_children{
+    grid-column: 4 / 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 88px;
+    padding: 0 13px;
 }
 
-.text-form__input{
-    margin-left: 24px;
-    padding-left: 14px;
-    padding-right: 10px;
+.form__label-wrapper{
+    display: flex;
+    grid-column: 1 / 2;
+}
 
-    text-transform: uppercase;
+.form__label-wrapper_children{
+    justify-self: flex-end;
+    grid-column: 3 / 4;
+}
+
+.form__input {
+    height: 38px;
     font-weight: 700;
-    line-height: 26px;
+    text-transform: uppercase;
+
+    cursor: pointer;
     border: none;
-
-    width: 332px;
-    height: 38px;
-
+    outline: none;
     background-color: var(--special-bg);
+    
 }
 
-/* .text-form__input_in{
-    margin-left: 15px;
-    padding-left: 13px;
-} */
+.form__input_in{
+    width: 303px;
+    padding:  0 0 0 13px;
+}
 
-/* .text-form__input_out{
-    margin-left: 14px;
-    padding-left: 13px;
-} */
+.form__input_out{
+    width: 303px;
+    padding:  0 0 0 13px;
+}
 
-
-.text-form__input_count{
+.form__input_count{
+    order: 1;
+    padding: 0;
+    width: 64px;
     text-align: center;
-    background-color: var(--special-bg);
-    width: 114px;
-    height: 38px;
-    outline: 5px solid rgba(255, 0, 255, 0.7);
-    outline-offset: -5px;
 }
 
-.text-form__submit{
-    grid-column-start: 1;
-    grid-column-end: 3;
+.form__icon:hover path,
+.form__icon:focus path{
+    fill: var(--basic-black);
+}
+
+.form__icon:active path{
+    fill: var(--basic-blue);
+}
+
+.form__icon:hover rect,
+.form__icon:focus rect{
+    fill: var(--basic-black);
+}
+
+.form__icon:active rect{
+    fill: var(--basic-blue);
+}
+
+.form__icon{
+    color: var(--icon-form);
+}
+
+.form__icon:hover{
+    color: var(--basic-black);
+}
+
+.form__icon:active{
+    color: var(--basic-blue);
+}
+
+.form-icon_minus{
+    order: 0;
+}
+
+.form-icon_plus{
+    order: 2;
+}
+
+.form__submit{
+    grid-column: 1 / 5;
     margin-top: 25px;
     width: 458px;
     height: 58px;
@@ -422,20 +461,14 @@ img {
     border: none;  
 }
 
-.text-form__submit:hover,
-.text-form__submit:focus{
+.form__submit:hover,
+.form__submit:focus{
     background-color: var(--dark-blue);
 }
 
-.text-form__submit:active{
+.form__submit:active{
     background-color: var(--darkest-blue);
     color: var(--dark-grey);
-}
-
-.form-search__calendar{
-    width: 21px;
-    height: 23px;
-    background-image: url(../img/calendar.svg);
 }
 
 /* Футер */
