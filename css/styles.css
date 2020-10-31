@@ -27,6 +27,8 @@
     --strip-decorate: #E5E5E5;
     --grey-arrow: #CACACA;
     --icon-form: #A9A9A9;
+    --toggle: #ABABAB;
+    --toggle-opacity: rgba(171, 171, 171, 0.3);
 
     --box-shadow: rgba(0, 1, 1, 0.2);
     --form-shadow: rgba(0, 1, 1, 0.15);
@@ -331,41 +333,6 @@ img {
     padding: 55px;
 }
 
-.form__item{
-    margin: 0;  
-}
-
-.form__input-wrapper{
-    display: flex;
-    align-items: center;
-    padding-right: 9px;
-    background-color: var(--special-bg);
-}
-
-.form__input-wrapper_date{
-    grid-column-start: 2;
-    grid-column-end: 5;
-}
-
-.form__input-wrapper_adults{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 88px;
-    padding: 0 13px;
-
-    background-color: var(--special-bg);
-}
-
-.form__input-wrapper_children{
-    grid-column: 4 / 5;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 88px;
-    padding: 0 13px;
-}
-
 .form__label-wrapper{
     display: flex;
     grid-column: 1 / 2;
@@ -376,90 +343,97 @@ img {
     grid-column: 3 / 4;
 }
 
-.form__input {
-    height: 38px;
-    font-weight: 700;
-    text-transform: uppercase;
+.form__item{
+    margin: 0;  
+}
 
-    cursor: pointer;
+.form__input {
+    padding: 0;
     border: none;
     outline: none;
-    background-color: var(--special-bg);
-    
-}
-
-.form__input_in{
-    width: 303px;
-    padding:  0 0 0 13px;
-}
-
-.form__input_out{
-    width: 303px;
-    padding:  0 0 0 13px;
+    background: transparent;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .form__input_count{
-    order: 1;
-    padding: 0;
-    width: 64px;
     text-align: center;
+    width: 38px;
 }
 
+.form__icon{
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.form__input-wrapper{
+    width: 346px;
+    display: grid;
+    grid-template-columns: 1fr 38px;
+    box-sizing: border-box;
+    height: 38px;
+    background-color: var(--special-bg);
+}
+
+.form__input-wrapper_date{
+    padding-left: 13px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+}
+
+.form__input-wrapper_count{
+    display: grid;
+    grid-template-columns: 38px 1fr 38px;
+    width: 114px;
+    height: 38px;
+}
 
 .form__input-wrapper:hover,
-.form__input-wrapper:focus,
-.form__input:hover,
-.form__input:focus{
+.form__input-wrapper:focus{
     background-color: var(--dark-bg);
-}
-
-.form__input-wrapper:active,
-.form__input:active{
-    background-color: var(--basic-white);
 }
 
 .form__input-wrapper:active{
     border: 2px solid var(--strip-decorate);
+    background-color: var(--basic-white);
 }
 
-
-.form__icon:hover path,
-.form__icon:focus path{
-    fill: var(--basic-black);
+.form-__icon_minus{
+    transform: translate(0 , -3px);
 }
 
-.form__icon:active path{
-    fill: var(--basic-blue);
+.form__icon_calendar{
+    transform: translate(0 , 2px); 
 }
 
-.form__icon:hover rect,
-.form__icon:focus rect{
-    fill: var(--basic-black);
-}
-
-.form__icon:active rect{
-    fill: var(--basic-blue);
-}
-
-.form__icon{
+.form__icon {
     color: var(--icon-form);
 }
 
-.form__icon:hover{
+.form__icon:hover,
+.form__icon:focus{
     color: var(--basic-black);
-}
+} 
 
 .form__icon:active{
     color: var(--basic-blue);
 }
 
-.form-icon_minus{
-    order: 0;
+.form__icon:hover path,
+.form__icon:hover rect,
+.form__icon:focus path,
+.form__icon:focus rect{
+    fill: var(--basic-black);
 }
 
-.form-icon_plus{
-    order: 2;
+.form__icon:active path,
+.form__icon:active rect{
+    fill: var(--basic-blue);
 }
+
+/* Кнопка формы */
 
 .form__submit{
     grid-column: 1 / 5;
@@ -587,9 +561,9 @@ img {
 }
 
 .filters{
+    padding: 0 73px;
     background-image: url("../img/filter.png");
     position: relative;
-    z-index: -1;
 }
 
 .catalog__info{
@@ -824,4 +798,139 @@ img {
 .count__stars {
     display: flex;
     justify-content: flex-end;
+}
+
+/* ФОРМА с фильтром */
+
+.filters__form{
+    display: grid;
+    grid-template-columns: max-content max-content 1fr max-content;
+    grid-column-gap: 119px;
+}
+
+.filters__item {
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: var(--basic-white);
+}
+
+.filters__item_column{
+    display: flex;
+    flex-direction: column;
+}
+
+.filters__item_cost{
+    grid-column: 4 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.filters__item_cost .filters__legend{
+    padding-bottom: 0px;
+}
+
+.filters__wrapper{
+    margin-bottom: 25px;
+}
+
+.filters__range{
+    width: 316px;
+    margin-top: 10px;
+}
+
+.filters__legend{
+    padding-top: 26px;
+    padding-bottom: 24px;
+    color: var(--basic-white);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.range__controls{
+    position: relative;
+    padding-bottom: 33px;
+}
+
+.range__scale{
+    height: 2px;
+    background-color: var(--dark-grey);
+}
+
+.range__bar{
+    width: 80%;
+    height: 2px;
+    background-color: var(--basic-white);
+}
+
+.range__toggle{
+    position: absolute;
+    top: -9px;
+    left: 0;
+    padding: 0;
+    background-color: var(--toggle);
+    width: 4px;
+    height: 4px;
+    border: 8px solid var(--basic-white);
+    border-radius: 50%;
+    box-shadow: 0 2px 0 0 var(--toggle-opacity);
+    cursor: pointer;
+}
+
+.range__toggle:hover{
+    border: 9px solid var(--basic-white);
+}
+
+.range__toggle_max{
+    left: 233px;
+}
+
+.price__controls{
+    display: flex;
+    justify-content: space-around;
+    height: 36px;
+    width: 317px;
+    border: 2px solid var(--basic-white);
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+
+.price__input{
+    padding: 0;
+    width: 50px;
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: var(--basic-white);
+}
+
+.price__strip{
+    width: 2px;
+    height: 22px;
+    background-color: var(--basic-white);
+    align-self: center;
+}
+
+.filters__button{
+    height: 36px;
+    width: 137px;
+
+    margin: 0 auto;
+    background: none;
+    outline: none;
+    cursor: pointer;
+
+    border: 2px solid var(--basic-white);
+    border-radius: 2px;
+
+    color: var(--basic-white);
+    text-transform: uppercase;
+}
+
+.filters__button:hover{
+    background-color: var(--basic-white);
+    color: var(--basic-black);
 }

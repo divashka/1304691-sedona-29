@@ -36,7 +36,65 @@
     <!-- Форма, фильтр поиска отеля -->
     <section class="filters">
       <h2 class="filters__title visually-hidden">Фильтр гостиниц</h2>
-      <!-- <button type="submit">Показать</button> -->
+
+      <form class="filters__form" method="get" action="https://echo.htmlacademy.ru">
+      
+        <fieldset class="filters__item filters__item_column">
+          <legend class="filters__legend">Инфраструктура:</legend>
+          <div class="filters__wrapper">
+            <input type="checkbox" name="pool" id="pool-field" checked>
+            <label for="pool-field">Бассейн</label>
+          </div>
+          <div class="filters__wrapper">
+            <input type="checkbox" name="parking" id="parking-field">
+            <label for="parking-field">Парковка</label>
+          </div>
+          <div class="filters__wrapper">
+            <input type="checkbox" name="wi-fi" id="wi-fi-field">
+            <label for="wi-fi-field">wi-fi</label>
+          </div>
+        </fieldset>
+        
+        <fieldset class="filters__item filters__item_column">
+          <legend class="filters__legend">Тип жилья:</legend>
+          <div class="filters__wrapper">
+            <input type="checkbox" name="hotel" id="hotel-field" checked>
+            <label for="hotel-field">Гостиница</label>
+          </div>
+          <div class="filters__wrapper">
+            <input type="checkbox" name="motel" id="motel-field" checked>
+            <label for="motel-field">Мотель</label>
+          </div>
+          <div class="filters__wrapper">
+            <input type="checkbox" name="apartments" id="apartments-field" checked>
+            <label for="apartments-field">Апартаменты</label>
+          </div>
+        </fieldset>
+        
+        <fieldset class="filters__item filters__item_cost">
+          <legend class="filters__legend">Стоимость в сутки (Р):</legend>
+          <div class="filters__range range">
+            <div class="price__controls price">
+              <label class="price__min">
+                от <input class="price__input" type="number" name="min-price" value="0">
+              </label>
+              <div class="price__strip"></div>
+              <label class="price__max">
+                до <input class="price__input" type="number" name="max-price" value="3000">
+              </label>
+            </div>
+            <div class="range__controls">
+              <div class="range__scale">
+                <div class="range__bar"></div>
+              </div>
+              <div class="range__toggle range__toggle_min" tabindex="0"></div>
+              <div class="range__toggle range__toggle_max" tabindex="0"></div>
+            </div>
+          </div>
+          <input class="filters__button" type="button" value="Показать">
+        </fieldset>
+      </form>
+
     </section>
 
     <section class="catalog">
@@ -148,8 +206,8 @@
     <div class="footer__wrapper">
 
       <div class="footer__contacts contacts">
-        <p class="contacts__hashtag">#visitSEDONA</br></p>
-        <span class="contacts__telephone">ТЕЛ:<a href='tel:7(495) 666-01-66'>+7(495) 666-01-66</a></span>
+        <p class="contacts__hashtag">#visitSEDONA<br></p>
+        <span class="contacts__telephone">ТЕЛ:<a href="tel:7(495)666-01-66">+7(495) 666-01-66</a></span>
       </div>
 
       <section class="footer__social">

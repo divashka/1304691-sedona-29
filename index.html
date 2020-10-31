@@ -35,12 +35,12 @@
       <!-- Приветственная страница -->
       <section class="welcome">
         <h1 class="welcome__title visually-hidden">Седона - отличное место для отдыха</h1>
-          <p class="text-image__welcome"><img src="img/welcome.svg" width="187,74" height="44,75"
+          <p class="text-image__welcome"><img src="img/welcome.svg" width="188" height="45"
               alt="Добро пожаловать">
           </p>
-          <p class="text-image__gorgeous"><img src="img/gorgeous.svg" width="255,95" height="28,8"
+          <p class="text-image__gorgeous"><img src="img/gorgeous.svg" width="256" height="29"
               alt="в безумно красивыq город!"></p>
-          <p class="text-image__sedona"><img src="img/sedona.svg" width="456,65" height="213,03" alt="СЕДОНА"></p>
+          <p class="text-image__sedona"><img src="img/sedona.svg" width="457" height="213" alt="СЕДОНА"></p>
       </section>
 
       <!-- Преимущества города -->
@@ -55,7 +55,7 @@
               <div class="text-block__center">
                 <h3 class="text-block__title">Настоящий<br>городок</h3>
                 <p class="text-block__sub">— №1 —</p>
-                <p class="text-block__desc">Седона - не аттракцион для туристов, там</br> течёт своя жизнь</p>
+                <p class="text-block__desc">Седона - не аттракцион для туристов, там<br> течёт своя жизнь</p>
               </div>
               <img class="text-block__image" src="img/infrastructure.jpg" width="800" height="256"
                 alt="Инфраструктура города">
@@ -88,7 +88,7 @@
               <div class="text-block__center">
                 <h3 class="text-block__title">Там есть<br>Мост дьявола</h3>
                 <p class="text-block__sub">— №2 —</p>
-                <p class="text-block__desc">Да, по нему можно пройти! Если конечно</br> вы осмелитесь</p>
+                <p class="text-block__desc">Да, по нему можно пройти! Если конечно<br> вы осмелитесь</p>
               </div>
             </div>
           </li>
@@ -98,19 +98,19 @@
           <li class="advantages__item advantages__item_bg advantages-item">
             <h3 class="advantages-item__title">Небольшая<br>площадь</h3>
             <p class="advantages-item__sub">— №3 —</p>
-            <p class="advantages-item__text">Все достопримечательности</br> находятся очень близко</p>
+            <p class="advantages-item__text">Все достопримечательности<br> находятся очень близко</p>
           </li>
 
           <li class="advantages__item advantages__item_bg advantages-item">
             <h3 class="advantages-item__title">Красивая<br>дорога</h3>
             <p class="advantages-item__sub">— №4 —</p>
-            <p class="advantages-item__text">Ехать в седону из Лас-вегаса</br> совсем не скучно!</p>
+            <p class="advantages-item__text">Ехать в седону из Лас-вегаса<br> совсем не скучно!</p>
           </li>
 
           <li class="advantages__item advantages__item_bg advantages-item">
             <h3 class="advantages-item__title">Мало<br>туристов</h3>
             <p class="advantages-item__sub">— №5 —</p>
-            <p class="advantages-item__text">Большинство едет в гранд каньон</br> и толпится там</p>
+            <p class="advantages-item__text">Большинство едет в гранд каньон<br> и толпится там</p>
           </li>
         </ul>
       </section>
@@ -123,68 +123,82 @@
           и мы покажем вам лучшие предложения гостиниц в Cедоне
         </p>
         <button class="conclusion__button" type="button">Поиск гостиницы в Седоне</button>
-
+      
         <div class="conclusion__search">
           <!-- <iframe class="conclusion__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26192.57784261214!2d-111.81264799912717!3d34.854412362093925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1604079776912!5m2!1sru!2sua" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
           <form class="conclusion__form form" action="https://echo.htmlacademy.ru" method="get">
-        
+      
             <div class="form__wrapper">
-              <p class="form__item">
+      
+              <div class="form__item">
                 <label class="form__label" for="date__in">Дата заезда:</label>
-              <div class="form__input-wrapper form__input-wrapper_date">
-                <input class="form__input form__input_in" type="text" name="date-in" id="date__in" value="24 апреля 2017">
-                <svg class="form__icon" width="21" height="23">
-                  <use xlink:href="#calendar" />
-                </svg>
+                <div class="form__input-wrapper form__input-wrapper_date">
+                  <input class="form__input form__input_in" type="text" name="date-in" id="date__in" value="24 апреля 2017">
+                  <button class="form__icon form__icon_calendar" type="button">
+                    <svg width="21" height="23">
+                      <use xlink:href="#calendar" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-              </p>
-        
-              <p class="form__item form__item_out">
-              <div class="form__label-wrapper"><label for="date__out">Дата выезда:</label></div>
-              <div class="form__input-wrapper form__input-wrapper_date">
-                <input class="form__input form__input_out"  type="text" name="date-out" id="date__out" value="4 июля 2017">
-                <svg class="form__icon" width="21" height="23">
-                  <use xlink:href="#calendar" />
-                </svg>
+      
+              <div class="form__item form__item_out">
+                <div class="form__label-wrapper"><label for="date__out">Дата выезда:</label></div>
+                <div class="form__input-wrapper form__input-wrapper_date">
+                  <input class="form__input" type="text" name="date-out" id="date__out" value="4 июля 2017">
+                  <button class="form__icon form__icon_calendar" type="button">
+                    <svg width="21" height="23">
+                      <use xlink:href="#calendar" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-              </p>
-        
-              <p class="form__item form__item_count">
-              <div class="form__label-wrapper"><label for="count-adults">Взрослые:</label></div>
-              <div class= "form__input-wrapper form__input-wrapper_adults">
-                <input class="form__input form__input_count"  type="text" name="adults" id="count-adults" value="2">
-                <svg class="form__icon form-icon_minus" width="12" height="3" viewBox="0 0 12 3" fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <rect width="12" height="3" fill="#A9A9A9" />
-                </svg>
-                <svg class="form__icon form-icon_plus" width="11" height="11" viewBox="0 0 11 11" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
-                    fill="#A9A9A9" />
-                </svg>
+
+              <div class="form__item form__item_count">
+                <div class="form__label-wrapper"><label for="count-adults">Взрослые:</label></div>
+      
+                <div class="form__input-wrapper form__input-wrapper_count">
+                  <button class="form__icon form__icon_minus" type="button">
+                    <svg width="12" height="3" viewBox="0 0 12 3" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="12" height="3" fill="#A9A9A9" />
+                    </svg>
+                  </button>
+      
+                  <input class="form__input form__input_count" type="text" name="adults" id="count-adults" value="2">
+      
+                  <button class="form__icon form-icon_plus" type="button">
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                        fill="#A9A9A9" />
+                    </svg>
+                  </button>
+                </div>
+      
+                <div class="form__label-wrapper form__label-wrapper_children"><label for="count-children">Дети:</label></div>
+                <div class="form__input-wrapper form__input-wrapper_count">
+                  <button class="form__icon form-icon_minus" type="button">
+                    <svg width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="12" height="3" fill="#A9A9A9" />
+                    </svg>
+                  </button>
+      
+                  <input class="form__input form__input_count" type="text" name="children" id="count-children" value="0">
+      
+                  <button class="form__icon form-icon_plus" type="button">
+                    <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
+                        fill="#A9A9A9" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-        
-              <div class="form__label-wrapper form__label-wrapper_children"><label for="count-children">Дети:</label></div>
-              <div class="form__input-wrapper form__input-wrapper_children">
-                <input class="form__input form__input_count"  type="text" name="children" id="count-children" value="0">
-                <svg class="form__icon form-icon_minus" width="12" height="3" viewBox="0 0 12 3" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <rect width="12" height="3" fill="#A9A9A9" />
-                </svg>
-                <svg class="form__icon form-icon_plus" width="11" height="11" viewBox="0 0 11 11" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
-                    fill="#A9A9A9" />
-                </svg>
-              </div>
-              </p>
               <input class="form__submit" type="submit" value="Найти">
             </div>
           </form>
         </div>
-
+      
       </section>
     </main>
 
@@ -193,8 +207,8 @@
       <div class="footer__wrapper">
 
         <div class="footer__contacts contacts">
-          <p class="contacts__hashtag">#visitSEDONA</br></p>
-          <span class="contacts__telephone">ТЕЛ:<a href='tel:7(495) 666-01-66'>+7(495) 666-01-66</a></span>
+          <p class="contacts__hashtag">#visitSEDONA<br></p>
+          <span class="contacts__telephone">ТЕЛ:<a href="tel:7(495)666-01-66">+7(495) 666-01-66</a></span>
         </div>
 
         <section class="footer__social">
@@ -247,12 +261,14 @@
 
 
     <svg class="visually-hidden">
-      <symbol id="calendar" width="21" height="23" viewBox="0 0 21 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-        <path fill-rule="evenodd" clip-rule="evenodd" 
-        d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" 
-        d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z"/>
-        </svg>
+      <symbol id="calendar" width="21" height="23" viewBox="0 0 21 23" fill="currentColor"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M16.406 3.02498H19.251C20.217 3.02498 21 3.84698 21 4.86198V21.164C21 22.179 20.217 23 19.251 23H1.75C0.784 23 0 22.179 0 21.164V4.86198C0 3.84698 0.784 3.02498 1.75 3.02498H4.593V1.64798C4.593 1.26698 4.887 0.958984 5.25 0.958984C5.612 0.958984 5.906 1.26698 5.906 1.64798V3.02498H9.844V1.64798C9.844 1.26698 10.138 0.958984 10.501 0.958984C10.862 0.958984 11.156 1.26698 11.156 1.64798V3.02498H15.094V1.64798C15.094 1.26698 15.387 0.958984 15.75 0.958984C16.112 0.958984 16.406 1.26698 16.406 1.64798V3.02498ZM19.5646 21.484C19.6466 21.3979 19.691 21.2828 19.688 21.164H19.689V4.86198C19.689 4.60898 19.493 4.40298 19.252 4.40298H16.407V5.78098C16.407 6.16198 16.113 6.46998 15.751 6.46998C15.388 6.46998 15.095 6.16198 15.095 5.78098V4.40298H11.157V5.78098C11.157 6.16198 10.863 6.46998 10.502 6.46998C10.139 6.46998 9.845 6.16198 9.845 5.78098V4.40298H5.907V5.78098C5.907 6.16198 5.613 6.46998 5.251 6.46998C4.888 6.46998 4.594 6.16198 4.594 5.78098V4.40298H1.75C1.50263 4.40953 1.30696 4.61458 1.312 4.86198V21.164C1.30696 21.4114 1.50263 21.6164 1.75 21.623H19.251C19.3698 21.6201 19.4826 21.5701 19.5646 21.484Z" />
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M4.59399 9.2251H7.21899V11.2911H4.59399V9.2251ZM4.59399 12.6681H7.21899V14.7351H4.59399V12.6681ZM7.21899 16.1121H4.59399V18.1781H7.21899V16.1121ZM9.18799 16.1121H11.813V18.1781H9.18799V16.1121ZM11.813 12.6681H9.18799V14.7351H11.813V12.6681ZM9.18799 9.2251H11.813V11.2911H9.18799V9.2251ZM16.406 16.1121H13.781V18.1781H16.406V16.1121ZM13.781 12.6681H16.406V14.7351H13.781V12.6681ZM16.406 9.2251H13.781V11.2911H16.406V9.2251Z" />
+      </symbol>
+    </svg>
 
     <svg class="visually-hidden">
       <symbol id="academy" width="114" height="40" viewBox="0 0 114 40" fill="currentColor"
