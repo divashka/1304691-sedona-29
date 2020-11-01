@@ -608,6 +608,7 @@ img {
 .type__text:active, 
 .rating__text:active {
     color: var(--basic-black);
+    border-bottom: none;
 }
 
 .arrow__icon {
