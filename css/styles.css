@@ -107,7 +107,7 @@ img {
 .header__menu{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 15px 0;
+    padding: 15px 72px;
     margin-top:-78px;
     list-style-type: none;
 }
@@ -121,10 +121,6 @@ img {
     text-align: right;
 }
 
-.header__menu li:first-child,
-.header__menu li:last-child{
-    padding: 0 72px;
-}
 
 .menu__item-link_active{
     color: var(--light-brown);
@@ -191,7 +187,7 @@ img {
 .advantages__list{
     display: grid;
     grid-template-columns: 400px 400px 400px;
-    grid-template-rows: 256px 330px 256px 256px;
+    grid-template-rows: repeat(4, max-content);
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -204,7 +200,12 @@ img {
 .advantages-item__img{
     height: 76px;
     width: auto;
+    margin-top: 60px;
     margin-bottom: 30px;
+}
+
+.text-block__image{
+    object-fit: cover;
 }
 
 .advantages-item__title{
@@ -213,12 +214,17 @@ img {
     margin-bottom: 25px;
 }
 
+.advantages-item__title_bg{
+   margin-top: 47px; 
+}
+
 .advantages-item__sub{
     margin-top: 0;
     margin-bottom: 23px;
 }
 .advantages-item__text{
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 54px;
 }
 
 .advantages__item_full{
@@ -292,6 +298,7 @@ img {
     text-transform: uppercase;
     font-weight: 700;
 
+    padding: 0;
     border: none;
     outline: none;
     cursor: pointer;
@@ -326,25 +333,14 @@ img {
 /* ФОРМА ПОИСКА */
 
 .form__wrapper{
-    display: grid;
-    grid-template-columns: max-content 1fr 1fr 1fr;
-    align-items: center;
-    column-gap: 24px;
     padding: 55px;
 }
 
-.form__label-wrapper{
-    display: flex;
-    grid-column: 1 / 2;
-}
-
-.form__label-wrapper_children{
-    justify-self: flex-end;
-    grid-column: 3 / 4;
-}
-
 .form__item{
-    margin: 0;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .form__input {
@@ -372,9 +368,12 @@ img {
     width: 346px;
     display: grid;
     grid-template-columns: 1fr 38px;
-    box-sizing: border-box;
     height: 38px;
     background-color: var(--special-bg);
+
+    -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .form__input-wrapper_date{
@@ -436,7 +435,6 @@ img {
 /* Кнопка формы */
 
 .form__submit{
-    grid-column: 1 / 5;
     margin-top: 25px;
     width: 458px;
     height: 58px;
@@ -448,7 +446,8 @@ img {
     background-color: var(--basic-blue);
     text-transform: uppercase;
     color: var(--basic-white);
-    
+
+    padding: 0;
     cursor: pointer;
     outline: none;
     border: none;  
@@ -495,8 +494,7 @@ img {
 .footer__list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    width: 150px;
+    justify-content: center;
     margin: 0 auto;
     padding: 0;
     list-style: none;
@@ -506,6 +504,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-right: 6px;
+    margin-bottom: 6px;
     width: 46px;
     height: 48px;
     background-color: var(--basic-blue);
@@ -557,19 +557,20 @@ img {
 
 .page-catalog{
     display: grid;
-    grid-template-rows: 217px 1fr;
+    grid-template-rows: max-content 1fr;
 }
 
 .filters{
     padding: 0 73px;
-    background-image: url("../img/filter.png");
+    background: url("../img/filter.png");
+    background-size: cover;
     position: relative;
 }
 
 .catalog__info{
     position: relative;
     display: grid;
-    grid-template-columns: max-content min-content max-content 1fr;
+    grid-template-columns: max-content min-content 1fr max-content;
     align-items: center;
     padding: 0 73px;
     margin: 30px 0;
@@ -591,6 +592,7 @@ img {
 
 .catalog__filter{
     display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -598,8 +600,7 @@ img {
     font-size: 12px;
 }
 
-.filter-type,
-.filter-price{
+.filter__item{
     margin-right: 32px;
 }
 
@@ -693,6 +694,7 @@ img {
 
 .link-image__hotel{
     float: left;
+    object-fit: contain;
 }
 
 .text-card__title{
@@ -790,6 +792,7 @@ img {
 
 .rating__count{
     margin: 0;
+    text-align: center;
     padding: 3px 14px;
     background-color: var(--special-bg);
     color: var(--text-rating);
@@ -812,7 +815,20 @@ img {
     margin: 0;
     padding: 0;
     border: none;
+
     color: var(--basic-white);
+}
+
+.filters__list{
+    margin: 0;
+    padding: 0;
+}
+
+.filters__unit{
+    padding: 0;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 25px;
 }
 
 .filters__item_column{
@@ -829,10 +845,6 @@ img {
 
 .filters__item_cost .filters__legend{
     padding-bottom: 0px;
-}
-
-.filters__wrapper{
-    margin-bottom: 25px;
 }
 
 .filters__range{
@@ -915,10 +927,8 @@ img {
 }
 
 .filters__button{
-    height: 36px;
-    width: 137px;
-
     margin: 0 auto;
+    padding: 7px 35px;
     background: none;
     outline: none;
     cursor: pointer;

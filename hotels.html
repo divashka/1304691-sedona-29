@@ -41,34 +41,37 @@
       
         <fieldset class="filters__item filters__item_column">
           <legend class="filters__legend">Инфраструктура:</legend>
-          <div class="filters__wrapper">
-            <input type="checkbox" name="pool" id="pool-field" checked>
-            <label for="pool-field">Бассейн</label>
-          </div>
-          <div class="filters__wrapper">
-            <input type="checkbox" name="parking" id="parking-field">
-            <label for="parking-field">Парковка</label>
-          </div>
-          <div class="filters__wrapper">
-            <input type="checkbox" name="wi-fi" id="wi-fi-field">
-            <label for="wi-fi-field">wi-fi</label>
-          </div>
+          <ul class="filters__list">
+            <li class="filters__unit">
+              <input type="checkbox" name="pool" id="pool-field" checked>
+              <label for="pool-field">Бассейн</label>
+            </li>
+            <li class="filters__unit">
+              <input type="checkbox" name="parking" id="parking-field">
+              <label for="parking-field">Парковка</label>
+            </li>
+            <li class="filters__unit">
+              <input type="checkbox" name="wi-fi" id="wi-fi-field">
+              <label for="wi-fi-field">wi-fi</label>
+            </li>
         </fieldset>
         
         <fieldset class="filters__item filters__item_column">
           <legend class="filters__legend">Тип жилья:</legend>
-          <div class="filters__wrapper">
-            <input type="checkbox" name="hotel" id="hotel-field" checked>
+          <ul class="filters__list">
+            <li class="filters__unit">
+              <input type="checkbox" name="hotel" id="hotel-field" checked>
             <label for="hotel-field">Гостиница</label>
-          </div>
-          <div class="filters__wrapper">
-            <input type="checkbox" name="motel" id="motel-field" checked>
+            </li>
+            <li class="filters__unit">
+              <input type="checkbox" name="motel" id="motel-field" checked>
             <label for="motel-field">Мотель</label>
-          </div>
-          <div class="filters__wrapper">
-            <input type="checkbox" name="apartments" id="apartments-field" checked>
+            </li>
+            <li class="filters__unit">
+              <input type="checkbox" name="apartments" id="apartments-field" checked>
             <label for="apartments-field">Апартаменты</label>
-          </div>
+            </li>
+          </ul>
         </fieldset>
         
         <fieldset class="filters__item filters__item_cost">
@@ -91,7 +94,7 @@
               <div class="range__toggle range__toggle_max" tabindex="0"></div>
             </div>
           </div>
-          <input class="filters__button" type="button" value="Показать">
+          <input class="filters__button" type="button" value="ПоказатьПоказатьПоказать">
         </fieldset>
       </form>
 
@@ -243,6 +246,7 @@
               </svg>
             </a>
           </li>
+
         </ul>
       </section>
 
