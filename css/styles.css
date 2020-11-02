@@ -383,6 +383,7 @@ img {
 }
 
 .form__input-wrapper:hover{
+   border: 2px solid var(--dark-bg);
    background-color: var(--dark-bg); 
 }
 
@@ -391,7 +392,7 @@ img {
    background-color: var(--basic-white);
 }
 
-.form-__icon_minus {
+.form__icon_minus {
     transform: translate(0 , -3px);
 }
 
