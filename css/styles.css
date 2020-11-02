@@ -401,6 +401,7 @@ img {
 }
 
 .form__icon {
+    cursor: pointer;
     color: var(--icon-form);
 }
 
