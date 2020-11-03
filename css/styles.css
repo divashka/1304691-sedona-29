@@ -307,19 +307,25 @@ img {
     background-color: var(--darkest-brown);
 }
 
-.conclusion__search {
-    height: 594px;
-    background-image: url(../img/map.png);
+
+.conclusion__map {
+    position: relative;
+    z-index: -1;
+    margin-top: -395px;
 }
 
 .conclusion__form {
-    /* position: fixed; */
     margin: 0 auto;
     width: 568px;
     height: 395px;
     font-weight: 700;
+    animation: bounce 0.9s;
     background-color: var(--basic-white);
     box-shadow: 0px 7px 15px var(--form-shadow);  
+}
+
+.conclusion__close {
+    display: none;
 }
 
 /* ФОРМА ПОИСКА */
@@ -949,3 +955,10 @@ img {
     background: url(../img/checkbox-on-disabled.svg);
 }
 
+/* Animations */
+
+@keyframes bounce {
+    0% {
+      transform: translateY(-86px);
+    }
+}
