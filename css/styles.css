@@ -20,6 +20,7 @@
     --icon-form: #A9A9A9;
     --toggle: #ABABAB;
     --icon-disabled: #6A6A6A;
+    --welcome-bg: #2b4544;
     --dark-grey: rgba(255, 255, 255, .3);
     --darkest-grey: rgba(0, 0, 0, 0.3);
     --special-footer: rgba(255, 255, 255, 0.9);
@@ -140,7 +141,7 @@ img {
     text-align: center;
     background:
     url("../img/background_2.png") no-repeat 0 100%,
-    url("../img/background.jpg") no-repeat;
+    var(--welcome-bg) url("../img/background.jpg") no-repeat;
 } 
 
 .text-image__welcome {
@@ -283,9 +284,9 @@ img {
 }
 
 .conclusion__button {
-    padding: 0;
-    height: 86px;
-    width: 568px;
+    position: relative;
+    z-index: 3;
+    padding: 30px 139px;
     cursor: pointer;
     font-size: 21px;
     line-height: 26px;
@@ -307,11 +308,17 @@ img {
     background-color: var(--darkest-brown);
 }
 
+.map {
+    height: 594px;
+    background-image: url(../img/map.png);
+}
 
 .conclusion__map {
     position: relative;
-    z-index: -1;
-    margin-top: -395px;
+}
+
+.conclusion__search {
+    position: relative;
 }
 
 .conclusion__form {
@@ -321,11 +328,30 @@ img {
     font-weight: 700;
     animation: bounce 0.9s;
     background-color: var(--basic-white);
-    box-shadow: 0px 7px 15px var(--form-shadow);  
+    box-shadow: 0px 7px 15px var(--form-shadow);
+    animation: debounce 0.3s;
+    transform-style: flat;
+    transform: rotateX(45deg) translateY(-173%);
+    animation: debounce 0.3s;
+    transition: transform 250ms linear;
 }
 
-.conclusion__close {
-    display: none;
+.conclusion__form-container{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    perspective: 500px;
+}
+
+.conclusion__form_visible {
+    animation: bounce 0.9s;
+    transform: none;
+}
+
+.conclusion__error {
+    animation: shake-1 0.9s;
 }
 
 /* ФОРМА ПОИСКА */
@@ -350,7 +376,8 @@ img {
     background: transparent;
 }
 
-.form__input_count {
+.form__input_children,
+.form__input_adults {
     width: 38px;
     text-align: center;
 }
@@ -556,9 +583,8 @@ img {
 }
 
 .filters {
-    position: relative;
     padding: 0 73px;
-    background: url("../img/filter.png");
+    background: var(--welcome-bg) url("../img/filter.png");
     background-size: cover;
 }
 
@@ -887,6 +913,10 @@ img {
     border-radius: 2px;
 }
 
+.price__controls_error {
+    animation: shake-1 0.8s;
+}
+
 .price__input {
     padding: 0;
     width: 50px;
@@ -959,6 +989,70 @@ img {
 
 @keyframes bounce {
     0% {
-      transform: translateY(-86px);
+      transform: rotateX(45deg) translateY(-173%);
+    }
+    50%{
+        transform: rotateX(45deg) translateY(-69.5%)
+    }
+    100%{
+        transform: none;
     }
 }
+
+@keyframes debounce {
+    0% {
+      transform: none;
+    }
+    50%{
+        transform: rotateX(45deg) translateY(-69.5%)
+    }
+    100%{
+        transform: rotateX(45deg) translateY(-173%);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+  }
+
+
+  @keyframes shake-1 {
+    0%,
+    100% {
+      transform: translateX(0);
+      border-color: red;
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
+    }
+  }

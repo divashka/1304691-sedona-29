@@ -95,9 +95,10 @@
     <section class="conclusion">
       <h2 class="conclusion__title">Заинтересовались?</h2>
       <p class="conclusion__text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
-      <button class="conclusion__button" type="button" aria-label="Открыть форму поиска гостиницы">Поиск гостиницы в Седоне</button>
+      <a class="conclusion__button" href="find-hotels.html" type="button" aria-label="Открыть форму поиска гостиницы">Поиск гостиницы в Седоне</a>
       <div class="conclusion__search">
-        <form class="conclusion__form form" action="https://echo.htmlacademy.ru" method="get">
+        <div class="conclusion__form-container">
+          <form class="conclusion__form conclusion__form_visible form" action="https://echo.htmlacademy.ru" method="get" target="_blank">
           <div class="form__wrapper">
             <div class="form__item">
               <label class="form__label" for="date__in">Дата заезда:</label>
@@ -114,7 +115,7 @@
             <div class="form__item form__item_out">
               <label for="date__out">Дата выезда:</label>
               <div class="form__input-wrapper form__input-wrapper_date" tabindex="0">
-                <input class="form__input" type="text" name="date-out" id="date__out" value="4 июля 2017">
+                <input class="form__input form__input_out" type="text" name="date-out" id="date__out" value="4 июля 2017">
                 <button class="form__icon form__icon_calendar" type="button" aria-label="Выбрать дату с помощью иконки календаря">
                   <svg aria-hidden="true" focusable="false" width="21" height="23">
                     <use xlink:href="#calendar" />
@@ -130,7 +131,7 @@
                     <rect width="12" height="3" fill="#A9A9A9" />
                   </svg>
                 </button>
-                <input class="form__input form__input_count" type="text" name="adults" id="count-adults" value="2">
+                <input class="form__input form__input_adults" type="text" name="adults" id="count-adults" value="2">
                 <button class="form__icon form__icon_plus" type="button" aria-label="Увеличить число взрослых">
                   <svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9" />
@@ -144,7 +145,7 @@
                     <rect width="12" height="3" fill="#A9A9A9" />
                   </svg>
                 </button>
-                <input class="form__input form__input_count" type="text" name="children" id="count-children" value="0">
+                <input class="form__input form__input_children" type="text" name="children" id="count-children" value="0">
                 <button class="form__icon form__icon_plus" type="button" aria-label="Увеличить число детей">
                   <svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z" fill="#A9A9A9" />
@@ -155,8 +156,11 @@
             <button class="form__submit" type="submit" aria-label="Найти гостиницу по заданным критериям">Найти</button>
           </div>
         </form>
-        <iframe class="conclusion__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26192.57784261214!2d-111.81264799912717!3d34.854412362093925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1604079776912!5m2!1sru!2sua" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
       </div>
+    </section>
+    <section class="map">
+      <iframe class="conclusion__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26192.57784261214!2d-111.81264799912717!3d34.854412362093925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sua!4v1604079776912!5m2!1sru!2sua" width="1200" height="594" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </section>
   </main>
   <footer class="footer">
