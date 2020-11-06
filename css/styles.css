@@ -140,7 +140,7 @@ img {
     height: 509px;
     text-align: center;
     background:
-    url("../img/background_2.png") no-repeat 0 100%,
+    url("../img/background-mask.png") no-repeat 0 100%,
     var(--welcome-bg) url("../img/background.jpg") no-repeat;
 } 
 
@@ -284,9 +284,14 @@ img {
 }
 
 .conclusion__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    height: 86px;
+    width: 568px;
     position: relative;
     z-index: 3;
-    padding: 30px 139px;
     cursor: pointer;
     font-size: 21px;
     line-height: 26px;
@@ -313,8 +318,9 @@ img {
     background-image: url(../img/map.png);
 }
 
-.conclusion__map {
+.map__iframe {
     position: relative;
+    border: 0;
 }
 
 .conclusion__search {
