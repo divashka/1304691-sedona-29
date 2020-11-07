@@ -21,6 +21,8 @@
     --toggle: #ABABAB;
     --icon-disabled: #6A6A6A;
     --welcome-bg: #2b4544;
+    --filters-bg: #6c6062;
+    --form-error: #ff0000;
     --dark-grey: rgba(255, 255, 255, .3);
     --darkest-grey: rgba(0, 0, 0, 0.3);
     --special-footer: rgba(255, 255, 255, 0.9);
@@ -55,7 +57,7 @@ img {
     height: auto;
 }
 
-.visually-hidden{
+.visually-hidden {
     position: absolute;
     clip: rect(0 0 0 0);
     width: 1px;
@@ -69,12 +71,6 @@ img {
     overflow: hidden;
 }
 
-.box-shadow {
-    margin: 0 auto;
-    width: 1200px;
-    box-shadow: 0px 5px 15px var(--box-shadow);
-}
-
 /* Grid */
 
 .page {
@@ -82,10 +78,18 @@ img {
 }
 
 .page-body {
+    background-color: var(--special-bg);
+}
+
+.body__wrapper {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
     align-content: start;
-    min-height: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    width: 1200px;
+    background-color: var(--basic-white);
+    box-shadow: 0px 5px 15px var(--box-shadow);
 }
 
 /* Шапка*/
@@ -97,20 +101,31 @@ img {
 }
 
 .header__nav {
+    text-align: center;
     font-weight: bold;
     line-height: 26px;
+}
+
+.header__logo {
+    display: inline-block;
+    vertical-align: top;
 }
 
 .header__menu {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    padding: 15px 72px;
-    margin-top:-78px;
+    text-align: left;
+    padding: 15px 0;
+    margin-top: -78px;
     list-style-type: none;
 }
 
-.header__logo {
-    text-align: center;
+.menu__info {
+    padding-left: 72px;
+}
+
+.menu__hotels {
+    padding-right: 72px;
 }
 
 .menu__map,
@@ -135,13 +150,11 @@ img {
 /* Приветственная страница */
 
 .welcome {
-    position: relative;
-    z-index: -1;
     height: 509px;
     text-align: center;
     background:
-    url("../img/background-mask.png") no-repeat 0 100%,
-    var(--welcome-bg) url("../img/background.jpg") no-repeat;
+    url(../img/background-mask.png) no-repeat 0 100%,
+    var(--welcome-bg) url(../img/background.jpg) no-repeat;
 } 
 
 .text-image__welcome {
@@ -151,7 +164,7 @@ img {
 }
 
 .text-image__gorgeous {
-    margin: 0 0 55px 0;
+    margin: 0 0 47px 0;
 }
 
 .text-image__sedona {
@@ -161,12 +174,12 @@ img {
 /* Основной контент  */
 
 .advantages {
-    margin-bottom: 58px;
+    margin-bottom: 54px;
 }
 
 .advantages__title {
-    margin-top: 43px;
-    margin-bottom: 54px;
+    margin: 43px auto;
+    width: 470px;
     text-align: center;
     font-size: 21px;
     line-height: 26px;
@@ -175,7 +188,7 @@ img {
 
 .advantages__reasons {
     margin-top: 0;
-    margin-bottom: 58px;
+    margin-bottom: 52px;
     text-align: center;
     line-height: 26px;
 }
@@ -196,8 +209,8 @@ img {
 .advantages-item__img {
     height: 76px;
     width: auto;
-    margin-top: 60px;
-    margin-bottom: 30px;
+    margin-top: 58px;
+    margin-bottom: 17px;
 }
 
 .text-block__image {
@@ -205,8 +218,11 @@ img {
 }
 
 .advantages-item__title {
+    width: 120px;
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28px;
     font-size: 21px;
 }
 
@@ -220,7 +236,7 @@ img {
 }
 .advantages-item__text {
     margin-top: 0;
-    margin-bottom: 54px;
+    margin-bottom: 82px;
 }
 
 .advantages__item_full {
@@ -229,6 +245,8 @@ img {
 
 .advantages__item_comment {
     align-self: center;
+    margin: 0 auto;
+    width: 300px;
 }
 
 .advantages__item_bg {
@@ -236,6 +254,11 @@ img {
     flex-direction: column;
     justify-content: center;
     background-color: var(--special-light);
+}
+
+.advantages__item_bg .advantages-item__text {
+    margin: 0 auto 54px auto;
+    width: 280px;
 }
 
 .text-block {
@@ -252,7 +275,10 @@ img {
 
 .text-block__title {
     margin-top: 0;
+    margin-right: auto;
     margin-bottom: 25px;
+    margin-left: auto;
+    width: 151px;
     font-weight: 700;
     font-size: 21px;
 }
@@ -263,7 +289,8 @@ img {
 }
 
 .text-block__desc {
-    margin: 0;
+    margin: 0 auto;
+    width: 310px;
 }
 
 /* Заключение */
@@ -274,13 +301,15 @@ img {
 }
 
 .conclusion__title {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     font-size: 30px;
     font-weight: bold;
 }
 
 .conclusion__text {
-    margin-bottom: 51px;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 45px;
 }
 
 .conclusion__button {
@@ -335,14 +364,10 @@ img {
     animation: bounce 0.9s;
     background-color: var(--basic-white);
     box-shadow: 0px 7px 15px var(--form-shadow);
-    animation: debounce 0.3s;
-    transform-style: flat;
-    transform: rotateX(45deg) translateY(-173%);
-    animation: debounce 0.3s;
-    transition: transform 250ms linear;
+    transform: none;
 }
 
-.conclusion__form-container{
+.conclusion__form-container {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -351,9 +376,16 @@ img {
     perspective: 500px;
 }
 
-.conclusion__form_visible {
-    animation: bounce 0.9s;
-    transform: none;
+.pointer-none {
+    pointer-events: none;
+}
+
+.conclusion__form_hidden {
+    transform-style: flat;
+    transform: rotateX(45deg) translateY(-173%);
+    transition: transform 250ms linear;
+    pointer-events: initial;
+    animation: debounce 0.3s;
 }
 
 .conclusion__error {
@@ -371,6 +403,19 @@ img {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 30px;
+}
+
+.form__item_count {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.form label {
+    justify-self: flex-start;
+}
+
+.form__label_children {
+    padding-left: 53px;
 }
 
 .form__input {
@@ -421,12 +466,12 @@ img {
     height: 38px;
 }
 
-.form__input-wrapper:hover{
+.form__input-wrapper:hover {
    border: 2px solid var(--dark-bg);
    background-color: var(--dark-bg); 
 }
 
-.form__input-wrapper:focus{
+.form__input-wrapper:focus {
    border: 2px solid var(--strip-decorate);
    background-color: var(--basic-white);
 }
@@ -488,7 +533,7 @@ img {
     background-color: var(--dark-blue);
 }
 
-.form__submit:active{
+.form__submit:active {
     color: var(--dark-grey);
     background-color: var(--darkest-blue);
 }
@@ -505,8 +550,8 @@ img {
 }
 
 .footer__contacts {
+    margin-top: 23px;
     text-align: center;
-    align-self: center;
     font-size: 21px;
     line-height: 26px;
     font-weight: bold;
@@ -589,8 +634,8 @@ img {
 }
 
 .filters {
-    padding: 0 73px;
-    background: var(--welcome-bg) url("../img/filter.png");
+    padding: 0 72px;
+    background: var(--filters-bg) url(../img/filter.png);
     background-size: cover;
 }
 
@@ -598,8 +643,8 @@ img {
     display: grid;
     grid-template-columns: max-content min-content 1fr max-content;
     align-items: center;
-    padding: 0 73px;
-    margin: 30px 0;
+    padding: 22px 73px;
+    border-bottom: 1px solid var(--strip-decorate);
 }
 
 .catalog__info-count {
@@ -656,7 +701,8 @@ img {
     width: 11px;
     height: 10px;
     padding: 0;
-    margin-left: 12px;
+    margin-left: 3px;
+    margin-right: 6px;
     cursor: pointer;
     border: none;
     border-radius: none;
@@ -684,9 +730,7 @@ img {
 }
 
 .catalog__arrow {
-    justify-self: end;
-    margin: 0;
-    padding: 0;
+    margin-top: 7px;
     cursor: pointer;
 }
 
@@ -701,8 +745,7 @@ img {
     grid-template-columns: max-content 2fr 1fr;
     grid-column-gap: 30px;
     height: 150px;
-    padding: 0 73px;
-    border-top: 1px solid var(--strip-decorate);
+    padding: 0 72px;
     border-bottom: 1px solid var(--strip-decorate);
 }
 
@@ -763,7 +806,7 @@ img {
     background-color: var(--dark-blue);
 }
 
-.text-card__button_blue:active{
+.text-card__button_blue:active {
     background-color: var(--darkest-blue);
     color: var(--dark-grey);
 }
@@ -791,14 +834,14 @@ img {
 }
 
 .count__item {
-    padding-right: 6px;
+    padding-left: 4px;
     background: url(../img/star.svg) 0px 0px no-repeat;
     width: 19px;
     height: 17px;
 }
 
-.count__star:last-child {
-    padding-right: 0;
+.count__item:last-child {
+    padding-left: 0;
 }
 
 .rating__count {
@@ -837,7 +880,6 @@ img {
 .filters__unit {
     padding: 0;
     margin-top: 0;
-    margin-bottom: 25px;
     list-style-type: none;
 }
 
@@ -854,7 +896,7 @@ img {
 }
 
 .filters__item_cost .filters__legend {
-    padding-bottom: 0px;
+    padding-bottom: 4px;
 }
 
 .filters__range {
@@ -863,8 +905,8 @@ img {
 }
 
 .filters__legend {
-    padding-top: 26px;
-    padding-bottom: 24px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     font-size: 16px;
     font-weight: 700;
     color: var(--basic-white);
@@ -872,7 +914,7 @@ img {
 
 .range__controls {
     position: relative;
-    padding-bottom: 33px;
+    padding-bottom: 31px;
 }
 
 .range__scale {
@@ -898,7 +940,6 @@ img {
     border-radius: 50%;
     background-color: var(--toggle);
     box-shadow: 0 2px 0 0 var(--toggle-opacity);
-    outline: 0; 
 }
 
 .range__toggle:hover {
@@ -906,17 +947,31 @@ img {
 }
 
 .range__toggle_max {
-    left: 233px;
+    left: 253px;
 }
 
 .price__controls {
-    display: flex;
-    justify-content: space-around;
-    height: 36px;
-    width: 317px;
+    display: grid;
+    grid-template-columns: 156px 2px 156px;
+    height: 32px;
+    width: 313px;
     margin-bottom: 20px;
     border: 2px solid var(--basic-white);
     border-radius: 2px;
+}
+
+.price__min {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 48px;
+}
+
+.price__max {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 21px;
 }
 
 .price__controls_error {
@@ -924,9 +979,7 @@ img {
 }
 
 .price__input {
-    padding: 0;
     width: 50px;
-    height: 100%;
     color: var(--basic-white);
     background: none;
     border: none;
@@ -934,27 +987,28 @@ img {
 
 .price__strip {
     align-self: center;
+    justify-self: center;
     width: 2px;
     height: 22px;
     background-color: var(--basic-white);
 }
 
-.filters__checkbox{
+.filters__checkbox {
     position: absolute;
     z-index: -1;
     opacity: 0;
 }
 
 .filters__button {
-    padding: 7px 35px;
-    margin: 0 auto;
+    padding: 8px 34px;
+    margin-left: 85px;
+    margin-right: 95px;
     cursor: pointer;
     color: var(--basic-white);
     text-transform: uppercase;
     border: 2px solid var(--basic-white);
     border-radius: 2px;  
     background: none;
-    outline: none;
 }
 
 .filters__button:hover {
@@ -965,8 +1019,13 @@ img {
 .filters__label {
     display: grid;
     grid-template-columns: 26px 1fr;
-    column-gap: 17px;
+    column-gap: 15px;
+    padding-bottom: 18px;
     cursor: pointer;
+}
+
+.filters__list:last-child {
+    padding-bottom: 12px;
 }
 
 .filters__checkbox:disabled + .filters__label::before {
@@ -977,6 +1036,7 @@ img {
     content: " ";
     width: 23px;
     height: 23px;
+    border: 2px solid transparent; 
     background: url(../img/checkbox-off.svg) no-repeat;
 }
 
@@ -984,7 +1044,12 @@ img {
     content: " ";
     width: 27px;
     height: 23px;
+    border: 2px solid transparent;
     background: url(../img/checkbox-on.svg) no-repeat;
+}
+
+.filters__checkbox:focus + .filters__label::before {
+    border: 2px solid var(--basic-black);
 }
 
 .filters__checkbox:checked:disabled + .filters__label::before {
@@ -1044,7 +1109,7 @@ img {
     0%,
     100% {
       transform: translateX(0);
-      border-color: red;
+      border-color: var(--form-error);
     }
   
     10%,
